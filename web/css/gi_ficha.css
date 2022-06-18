@@ -1,0 +1,227 @@
+body {
+    background-color: darkcyan;
+}
+
+.corpo {    
+    font: -webkit-small-control;
+    color: black!important;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.inf {
+    --inf-w: 90vw;
+    --inf-gap: 10px;
+    --inf-w-gap: calc(var(--inf-w) - calc(var(--inf-gap) * 3));
+    margin-top: 5vh;
+    margin-bottom: 100px; /*para espaçar botão*/
+
+    display: grid;
+    grid-template-areas: '. . . .';
+    grid-auto-columns: calc(var(--inf-w-gap) / 4);
+    grid-auto-rows: min-content;
+    gap: var(--inf-gap);
+
+    font-size: 13px; /*font-size: clamp(0.4vw, 13px, 1.6vw)*/
+    
+    border-radius: 20px;
+}
+.inf>.inf_div>.opcao>* {
+    font-weight: bold!important;
+    text-transform: capitalize;
+}
+
+.inf_div {
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: min(50%) min(50%);
+    /*grid-template-columns: 50% 50%;*/
+    align-items: end;
+    align-content: space-between;
+    grid-row-gap: 15px;
+
+    box-shadow: 0px 0px 12px 5px #00000021;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+
+    transition: transform .4s;
+}
+
+.inf_div:hover {
+    transform: scale(1.03);
+}
+
+.inf_div:nth-of-type(1){    
+    grid-column: span 3;
+    column-gap: 20px;
+    grid-template-columns: min-content auto 25%;
+    grid-template-rows: auto auto;  
+    align-items: center;
+
+    color: white;
+}
+
+.inf_div:nth-of-type(1)>.opcao {
+    height: min-content;
+}
+
+.inf_div:nth-of-type(-n+2) {
+    background-color: rgb(32, 20, 83);
+    color: white;
+}
+
+.inf_div:nth-of-type(-n+2) textarea, .inf_div:nth-of-type(-n+2) input {
+    color: white;
+}
+
+.inf_div textarea, .inf_div input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 13px; /*font-size: clamp(0.4vw, 13px, 1.6vw)*/
+    resize:none;
+    font-family: Arial,Helvetica,sans-serif;
+
+}
+
+.opcao {
+    height: -webkit-fill-available;
+
+    display: flex;    
+    flex-direction: column;
+    justify-content: initial;
+    /*gap: 4px; bug com inputs*/
+
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.opcao>p:nth-of-type(1) {
+    user-select: none;
+
+    font-size: 15px;
+    color: darkcyan;
+    word-wrap: break-word;
+}
+
+.butt_resp {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+
+    background-color: cadetblue;
+    color: white;
+    font-weight: 700;
+    word-wrap: break-word;
+} 
+
+.butt {
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 3px;
+    cursor: pointer;
+
+
+    background: rgb(32, 20, 83);
+    color: white;
+    border: 2px white solid;
+    /*box-shadow: 0px 0px 12px 5px #00000021;*/
+
+    font-size: 17px;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    transition: transform .4s;
+}
+.editar {
+    height: 35px;
+    width: 100px;
+    right: 5vw;
+    bottom: 5vh;
+}
+.salvar {
+    height: calc(35px + 4px);
+    width: calc(100px + 4px);
+    right: calc(5vw + 120px);
+    bottom: 5vh;
+}
+.deletar {
+    height: calc(35px + 4px);
+    width: calc(100px + 14px);
+    left: 5vw;
+    bottom: 5vh;
+}
+
+.edit {
+    transform: translate(-50%, 0);
+    left: 50vw;
+    bottom: 5vh;
+    height: 35px;
+    width: 300px;
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: darkcyan;
+    border: 2px white solid;
+    border-radius: 3px;
+
+    font-size: 20px;
+    color: white;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.butt:hover {
+    transform: scale(1.06);
+}
+
+.butt_edit>img {
+    width: 15px;
+    height: 15px;
+}
+
+.inf img#img_aluno {
+	height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 0;
+    border: 5px solid white;
+    object-fit: cover;
+}
+
+input, select {
+    font-size: var(--font-size);
+}
+select {
+    border: none;
+    outline: none;
+}
+
+#nome, #codigo_aluno, #email {
+    font-size: 18px;
+}
+
+textarea#estado, textarea#nacionalidade{
+    text-transform: none;
+}
+
+#email, #email_rl1, #email_rl2, #email_pessoal {
+    word-wrap: break-word;
+    text-transform: none;
+}

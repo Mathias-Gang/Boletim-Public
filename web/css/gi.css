@@ -1,0 +1,46 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+
+    background: darkcyan;
+    color: white;
+
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.corpo {
+    width: 100vw;
+    min-height: calc(100vh - var(--heigh-bar));
+    margin-top: var(--heigh-bar);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.resultadoPesquisa {
+    color: black; 
+    background-color: white;
+}
+
+.bar {
+    z-index: 3;
+}
+.card {
+     z-index: 2; 
+}
+.card-background {
+     z-index: 1; 
+}

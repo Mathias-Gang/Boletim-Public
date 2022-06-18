@@ -1,0 +1,21 @@
+Options -Indexes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L] 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([apt])-([0-9]+)/?$ ?$1=$2 [NC,L]
+
+#LocalHost
+ErrorDocument 403 http://localhost
+ErrorDocument 404 http://localhost
+ErrorDocument 500 http://localhost
+
+#Live
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+#ErrorDocument 403 http://boletim.web2iserj.com.br
+#ErrorDocument 404 http://boletim.web2iserj.com.br
+#ErrorDocument 500 http://boletim.web2iserj.com.br

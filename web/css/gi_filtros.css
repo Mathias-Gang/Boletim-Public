@@ -1,0 +1,108 @@
+.gi_filtros_hub {
+    width: 100%;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.gi_filtros_tipos {
+    width:20%;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 1%;
+}
+
+.formulario {
+    background-color: darkcyan;
+    width: 80%;
+    height: fit-content;
+    padding: 0.5%;
+    display: flex;
+}
+.form_div {
+    display: grid;
+    padding: 8px;
+    margin: 5px!important;
+    border-radius: 5px;
+    margin: auto 0 auto 0;
+    background-color: cadetblue;
+}
+.formulario>form {
+    width: 90%;
+    display: grid;
+}
+.formulario>form:nth-of-type(1), .formulario>form:nth-of-type(2) {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.formulario>form:nth-of-type(3) {
+    grid-template-columns: 34% 33% 33%;
+}
+.butt {
+    cursor: pointer;
+    background-color: #72E4D5;
+    border: double;
+    border-color: white;
+    padding: 20px;}
+.butt:hover {
+    background-color: #201453;
+    color: white;
+}
+.opcao {
+    padding: 8px;
+    margin: 5px!important;
+    border-radius: 5px;
+    display: flex;    
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.opcao:hover {
+    background-color: #ffffff21;
+}
+
+.opcao label {
+    margin: auto 0;
+}
+div[style*="grid-template-columns: auto auto auto;"]>.opcao {
+    background-color: darkslateblue;
+}
+.login {
+    font-weight: 700;
+    height: 45px;
+    width: 130px;
+    
+    background-color: transparent;
+    color: white;
+    transition: all 0.2s ease-out;
+    border-color: #201453;
+    border: solid;
+}
+.login:hover {
+    background-color: white !important;
+    border-color: white !important;
+    color: #39557c !important;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 16px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.5;
+    padding: 5px;
+    transition: opacity .2s;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: black;
+    cursor: pointer;
+}
+input[type="range"]:hover {
+    opacity: 0.7;
+}

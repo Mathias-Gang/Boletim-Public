@@ -1,0 +1,37 @@
+.texto {
+    font-family: Arial,Helvetica;
+    width: -webkit-fill-available;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    color: black;
+}
+.corpo {
+    gap: 7vw;
+
+    font-size: clamp(0.4vw, 13px, 2vw);
+    text-transform: capitalize;
+}
+.inserirConta {
+    color: black;
+    width: 300px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32, 20, 83);
+
+    border: 2px solid white;
+    border-radius: 8px;    
+}
+.pesquisaGeral>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sessoes {
+    width: 300px;
+    height: 350px;
+}

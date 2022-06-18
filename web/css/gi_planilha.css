@@ -1,0 +1,38 @@
+.upload {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 18px;
+
+
+	height: 35px;
+	width: auto;
+
+	background: rgb(32, 20, 83);
+	border: 2px white solid;
+	padding: 8px 30px;
+	border-radius: 3px;
+
+	user-select: none;
+	-webkit-user-drag: none;
+	cursor: pointer;
+
+	font-size:20px;
+	transition: -webkit-transform .2s, box-shadow .4s;
+}
+
+.upload:hover {
+    -webkit-transform: scale(1.04);
+	box-shadow: 0px 0px 20px 0.5px white;
+}
+
+.upload>input {
+	display: none;
+}
+
+.upload>img {
+	width: 25px;
+	height: 25px;
+
+	filter: invert(1);
+}

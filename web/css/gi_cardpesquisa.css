@@ -1,0 +1,85 @@
+.texto {
+    font-family: Arial,Helvetica;
+    width: -webkit-fill-available;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    color: black;
+}
+
+.card {
+    display:  none;
+    transform: translate(-50%, -50%);
+    left: 50vw;
+    top: calc(50vh + var(--heigh-bar));
+    width: 700px;
+    height: 510px;
+    position: fixed;
+
+    /*font-size: ;*/
+    text-transform: lowercase;
+    text-transform: capitalize;
+
+
+    background-color: #201453;
+}
+
+.card-background {
+    display: none;
+
+    position: fixed;
+    backdrop-filter: blur(8px) contrast(0.7);
+    width: 100vw;
+    height: 100vh;
+}
+
+.pesquisaGeral {
+    top: 5px;
+    left: 40%;
+
+    width: inherit;
+
+    justify-self: center;
+}
+.pesquisa {
+    max-height: calc(510px - 53px);
+    width: -webkit-fill-available;
+    margin-top: 2px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+
+    overflow: auto;
+}
+
+.pesquisa>a {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    color: white;
+    background-color: #375078;
+}
+
+.pesquisa>a>img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 20px;
+    border: inset;
+    border-color: white;
+}
+.pesquisa>a>div {
+    height: inherit;
+    width: -webkit-fill-available;
+
+    display: grid;
+    grid-template-columns: 48% 52%;
+    align-items: center;
+    justify-content: space-evenly;
+}
